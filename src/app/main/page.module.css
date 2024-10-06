@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "PPNeueMontreal-Book";
+  src: url("/public/fonts/PPNeueMontreal-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.titleClass {
+  font-family: "PPNeueMontreal-Book", sans-serif;
+  color: #fff;
+  background-color: black;
+}
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+}
