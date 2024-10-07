@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
-import styles from "./ButtonMenu.module.css";
+import styles from "./MobileMenu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import buttonOpen from "../../../public/img/header_menu_open.svg";
-import buttonClose from "../../../public/img/header_menu_close.svg";
-import myImage from "../../../public/img/logo_header.svg";
+import buttonOpen from "/public/img/header_menu_open.svg";
+import buttonClose from "/public/img/header_menu_close.svg";
+import myImage from "/public/img/logo_header.svg";
 import { useState } from "react";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../../../ButtonNavigation/ButtonLink";
 
 type ButtonProps = {
   buttonText: string;
@@ -17,7 +17,7 @@ type ButtonProps = {
   children?: React.ReactNode;
 };
 
-const ButtonMenu: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
+const MobileMenu: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
 
   const router = useRouter();
@@ -32,7 +32,7 @@ const ButtonMenu: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
 
   return (
     <div className={styles.menu}>
-      {!isOpen && <a className={styles.header_link}>Меню</a>}
+      {/* {!isOpen && <a className={styles.header_link}>Меню</a>} */}
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -44,11 +44,13 @@ const ButtonMenu: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
       {isOpen && (
         <nav className={styles.header_nav}>
           <div className={styles.header_navLogo}>
-            <Image
-              className={styles.logoImg}
-              src={myImage}
-              alt="Description of image"
-            />
+            <Link href="/">
+              <Image
+                className={styles.logoImg}
+                src={myImage}
+                alt="Description of image"
+              />
+            </Link>
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -84,4 +86,4 @@ const ButtonMenu: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
   );
 };
 
-export default ButtonMenu;
+export default MobileMenu;

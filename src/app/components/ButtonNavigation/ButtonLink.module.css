@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "PPNeueMontreal-Book";
+  src: url("/public/fonts/PPNeueMontreal-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.buttonLink {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-family: "PPNeueMontreal-Book", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 50px;
+  padding: 8px 8px 8px 20px;
+  width: 129px;
+  height: 44px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.buttonLink:hover {
+  background-color: rgb(129, 127, 127);
+  color: black;
+}
+
+.buttonLinkImg {
+  border-radius: 20px;
+  padding: 8px;
+  width: 28px;
+  height: 28px;
+  background: #ffb300;
+  margin-left: 8px;
+}
